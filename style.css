@@ -40,18 +40,20 @@ h1, h2, h3, h4, h5, h6, .logo-container, .marquee-content, .bento-tag, .pill-bub
 /* Nav */
 nav {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
+  top: 1.5rem;
+  left: 2rem;
+  width: calc(100% - 4rem);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 3rem;
-  background-color: rgba(250, 249, 245, 0.8);
+  padding: 0.75rem 2.5rem;
+  background-color: rgba(250, 249, 245, 0.7);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   z-index: 1000;
-  border-bottom: 1px solid rgba(232, 230, 220, 0.5);
+  border: 1px solid rgba(232, 230, 220, 0.8);
+  border-radius: 999px;
+  box-shadow: var(--shadow-sm);
 }
 
 .logo-container {
@@ -132,7 +134,7 @@ nav {
 
 /* Hero Section */
 .hero {
-  padding: 12rem 0 10rem;
+  padding: 12rem 0 4rem; /* Drastically reduced bottom spacing for tighter desktop flow */
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -253,12 +255,12 @@ nav {
   overflow: hidden;
   white-space: nowrap;
   background: var(--surface-card);
-  padding: 2rem 0;
+  padding: 1.5rem 0; /* Reduced from 2rem */
   border-top: 1px solid var(--border-color);
   border-bottom: 1px solid var(--border-color);
   display: flex;
   transform: rotate(-1deg) scale(1.02);
-  margin: 4rem 0;
+  margin: 2rem 0; /* Reduced from 4rem */
   box-shadow: var(--shadow-sm);
 }
 
@@ -282,7 +284,7 @@ nav {
 
 /* Feature Sections (Abode style) */
 .section-features {
-  padding: 6rem 0;
+  padding: 3rem 0 6rem; /* Reduced top padding to sit closer to marquee */
   text-align: center;
 }
 
@@ -517,7 +519,7 @@ nav {
 
 /* Call to Action Final */
 .cta-section {
-  padding: 10rem 2rem;
+  padding: 6rem 2rem;
   text-align: center;
 }
 .cta-section h2 {
@@ -654,7 +656,12 @@ footer {
     font-size: 1.15rem; /* Much smaller mobile marquee */
   }
   .floating-element { display: none; }
-  nav { padding: 1.5rem; }
+  nav { 
+    top: 1rem;
+    left: 1rem;
+    width: calc(100% - 2rem);
+    padding: 0.75rem 1.5rem; 
+  }
   .footer-top {
     flex-direction: column;
     align-items: flex-start;
@@ -710,7 +717,10 @@ footer {
     height: 1rem;
   }
   nav {
-    padding: 0.75rem 1rem;
+    top: 0.75rem;
+    left: 0.75rem;
+    width: calc(100% - 1.5rem);
+    padding: 0.6rem 1rem;
   }
   .hero-subtext {
     font-size: 1.1rem;
